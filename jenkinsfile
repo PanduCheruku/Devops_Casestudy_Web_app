@@ -1,0 +1,28 @@
+node{
+    stage('Git checkout'){
+        git credentialsId: 'gitHub_creds', url: 'git@github.com:rahulkalithkar/1383051_Devops_Casestudy_Web_app.git'
+    }
+    
+    stage('SonarQube Analysis & Build'){
+        withSonarQubeEnv(credentialsId: 'SonarQube_access') {
+        sh 'mvn clean package sonar:sonar'
+        }
+    }
+    
+    stage('Docker Build'){
+        sh 'sudo docker build -t kalithkar/casestudy_web_app:3.0 .'
+    }
+    
+    stage('Docker push to repo'){
+       
+       withCredentials([string(credentialsId: 'docker_credentials', variable: 'Docker')]) {
+        sh 'sudo docker login -u kalithkar -p ${Docker}'
+        sh 'sudo docker push kalithkar/casestudy_web_app:3.0'
+        }
+    }
+    
+    stage('Lauching EC2 using ansible & Run'){
+        ansiblePlaybook installation: 'Ansible', playbook: 'createec2.yaml'
+    }
+    
+}
