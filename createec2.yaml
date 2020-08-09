@@ -13,4 +13,5 @@
         count: 1
         vpc_subnet_id: subnet-7f375c33
         assign_public_ip: yes
+        user_data: "{{ lookup('file', 'installations.sh') }}"
 ...
