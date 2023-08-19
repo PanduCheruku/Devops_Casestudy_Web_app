@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_1383051_Devops_Casestudy_Web_app_1692463301164-pr-trigger-input-set
+  identifier: Build_1383051_Devops_Casestudy_Web_app_1692463301164prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: CIWebApp
+  pipeline:
+    identifier: Build_1383051_Devops_Casestudy_Web_app_1692463301164
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
