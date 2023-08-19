@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_1383051_Devops_Casestudy_Web_app_1692463301164-push-trigger-input-set
+  identifier: Build_1383051_Devops_Casestudy_Web_app_1692463301164pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: CIWebApp
+  pipeline:
+    identifier: Build_1383051_Devops_Casestudy_Web_app_1692463301164
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
