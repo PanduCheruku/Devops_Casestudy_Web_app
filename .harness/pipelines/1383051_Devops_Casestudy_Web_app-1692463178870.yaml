@@ -1,0 +1,33 @@
+pipeline:
+  name: Build 1383051_Devops_Casestudy_Web_app
+  identifier: Build_1383051_Devops_Casestudy_Web_app_1692463301164
+  projectIdentifier: CIWebApp
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          infrastructure:
+            type: KubernetesHosted
+            spec:
+              identifier: k8s-hosted-infra
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: alpine
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1692456884886
+        repoName: rahulkalithkar/1383051_Devops_Casestudy_Web_app
+        build: <+input>
