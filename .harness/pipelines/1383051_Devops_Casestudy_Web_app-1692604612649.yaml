@@ -33,10 +33,10 @@ pipeline:
                       spec:
                         branch: master
           platform:
-            os: Windows
+            os: Linux
             arch: Amd64
           runtime:
-            type: Cloud
+            type: Docker
             spec: {}
   properties:
     ci:
