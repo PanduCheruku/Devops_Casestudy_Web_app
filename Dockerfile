@@ -1,4 +1,4 @@
-FROM tomcat:8.0-alpine
+FROM rashisaini19/dockerrepo:v1.0
 
 COPY target/*.war webapps/
 
