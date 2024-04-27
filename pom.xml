@@ -12,7 +12,15 @@
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
         <junit.platform.version>1.5.2</junit.platform.version>
+     <sonar.host.url>http://13.250.114.29:9000/</sonar.host.url>
     </properties>
+  <pluginRepositories>
+	    <pluginRepository>    
+		<id>maven</id>
+		<name>Maven.org</name>
+		<url>http://repo1.maven.org/maven2</url>
+	    </pluginRepository>
+	</pluginRepositories>
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
