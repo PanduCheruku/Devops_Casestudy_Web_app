@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.casestudy</groupId>
   <artifactId>Devops_CaseStudy_Web_app</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>8.2.0</version>
   <packaging>war</packaging>
   <name>Devops_CaseStudy_Web_app</name>
   <url>http://maven.apache.org</url>
