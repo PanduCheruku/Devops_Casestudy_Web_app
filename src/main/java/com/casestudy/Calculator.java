@@ -13,8 +13,8 @@ public class Calculator {
 		return a*b;
 	}
 	
-	public float div(int a, int b) {
-		return float(a/b);
+	public float div(float a, float b) {
+		return (a/b);
 	}
 
 }
